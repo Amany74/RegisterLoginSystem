@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home  </title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font for Quote text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<body>
+
+        <div class="text-muted container-fluid bg min-vh-100">
+            <div class="container d-flex align-items-center justify-content-center flex-column">
+                <h2 class="title mt-5"></h2>
+                <div id="custom-card" class="w-50 p-5 d-flex flex-column">
+                
+                </div>
+            </div>    
+    </div>
+
+    <script>
+        // Check if user is logged in
+    let homeBody = document.querySelector("#custom-card");
+    let title = document.querySelector(".title");
+    let flag = JSON.parse(localStorage.getItem("flag"));
+    if(flag){
+        let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        title.innerHTML="Home Page";
+        homeBody.innerHTML = `<h2>Hello, ${currentUser.name}</h2> 
+        <p> Welcome Home.</p>
+        <h4>Email : </h4> <p>${currentUser.email}</p>
+        <a href="./login.html"><button id="btnOut" class="btn btn-danger">Log out </button></a>`;
+        
+    }else{
+        title.innerHTML ="";
+        homeBody.innerHTML =`Please Log In first !<a id="logIn" href="login.html">Login</a>
+        `;
+    }
+
+    </script>
+
+</body>

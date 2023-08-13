@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font for Quote text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<body>
+
+    <div class="container-fluid bg min-vh-100">
+        <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+            <div id="custom-card">
+                <div class="card-1">
+                    <img src="./images/girl.jpg" alt="">
+                </div>
+                <div class="card-2">
+                    <div class="card-2-content">
+                        <h1>Sign Up</h1>
+                        <p class="text-muted">Welcome to the site , sign up here easily.</p>
+                        <div class="inputs">
+                            <label for="userName"><h5 class="cust-clr">Username</h5></label>
+                            <input oninput="ValidateName()" class="form-control" type="text" name="userName" id="userName">
+                            <p class="userNameErr text-danger"> </p>
+                            <label for="userEmail"><h5 class="cust-clr">Email</h5></label>
+                            <input oninput="ValidateEmail()" class="form-control" type="email" name="userEmail" id="userEmail" >
+                            <p class="userEmailErr text-danger"> </p>
+                            <label for="userPassword"><h5 class="cust-clr">Password</h5></label>
+                            <input oninput="ValidatePassword()" class="form-control" type="password" name="userPassword" id="userPassword" >
+                            <p class="userPasswordErr text-danger"> </p>
+                            
+                        </div>
+                        <p class="globalErr text-danger"></p>
+                        <button id="btnRegister">Register</button> 
+                        <p>Already registered? <span><a id="aLogin" href="./login.html">Login</a></span> </p>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
